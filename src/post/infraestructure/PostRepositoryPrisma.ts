@@ -26,4 +26,27 @@ export class PostRepositoryPrisma implements IPostRepository {
       postSaved.updatedAt
     );
   }
+
+  async update(postId: string, title: string, content: string): Promise<Post> {
+    try {
+        const postUpdated = await this.prisma.post.update({
+            where: { id: postId },
+            data: {
+                title,
+                content,
+            },
+        });
+
+        return new Post(
+            postUpdated.title,
+            postUpdated.content,
+            postUpdated.createdAt,
+            postUpdated.updatedAt,
+            // Puedes mapear otras propiedades según tu modelo
+        );
+    } catch (error) {
+        console.error(error);
+        throw new Error('Error al actualizar la publicación');
+    }
+}
 }
