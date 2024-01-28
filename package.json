@@ -4,7 +4,8 @@
   "description": "Práctica con el uso de la arquitectura hexagonal.",
   "main": "index.js",
   "scripts": {
-    "dev": "tsnd --respawn src/index.ts"
+    "dev": "tsnd --respawn src/index.ts",
+    "sonarqube": "sonar-scanner"
   },
   "dependencies": {
     "@prisma/client": "^5.8.1",
@@ -16,6 +17,7 @@
     "@types/node": "^20.11.5",
     "@types/signale": "^1.4.7",
     "prisma": "^5.8.1",
+    "sonar-scanner": "^3.1.0",
     "ts-node-dev": "^2.0.0"
   },
   "keywords": [],

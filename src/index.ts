@@ -3,9 +3,11 @@ import signale from 'signale';
 import UserRouter from './user/infraestructure/UserRoutes';
 import PostRouter from './post/infraestructure/PostRoutes';
 
-const app = express();
-
 const port = process.env.PORT || 3000;
+
+const app = express();
+app.disable("x-powered-by");
+
 app.use(express.json());
 
 app.use('/user', UserRouter);
