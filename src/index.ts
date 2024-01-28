@@ -1,7 +1,7 @@
 import express from 'express';
 import signale from 'signale';
 import UserRouter from './user/infraestructure/UserRoutes';
-import PostRouter from './post/interfaces/controllers/PostControllers';
+import PostRouter from './post/infraestructure/PostRoutes';
 
 const app = express();
 

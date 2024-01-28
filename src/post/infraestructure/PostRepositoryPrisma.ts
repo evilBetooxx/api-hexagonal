@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { IPostRepository } from "../interfaces/ports/IPostRepository";
+import { IPostRepository } from "../domain/IPostRepository";
 import { Post } from "../domain/Post";
 
 export class PostRepositoryPrisma implements IPostRepository {

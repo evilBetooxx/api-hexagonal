@@ -1,4 +1,4 @@
-import { IPostRepository } from "../interfaces/ports/IPostRepository";
+import { IPostRepository } from "../domain/IPostRepository";
 import { Post } from "../domain/Post";
 
 export class CreatePost {
