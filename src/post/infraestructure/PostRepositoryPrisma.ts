@@ -42,7 +42,6 @@ export class PostRepositoryPrisma implements IPostRepository {
             postUpdated.content,
             postUpdated.createdAt,
             postUpdated.updatedAt,
-            // Puedes mapear otras propiedades según tu modelo
         );
     } catch (error) {
         console.error(error);

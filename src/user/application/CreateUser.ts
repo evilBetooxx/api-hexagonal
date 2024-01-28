@@ -1,4 +1,4 @@
-import { IUserRepository } from "../interfaces/ports/IUserRepository";
+import { IUserRepository } from "../domain/IUserRepository";
 import { User } from "../domain/User";
 
 export class CreateUser {
