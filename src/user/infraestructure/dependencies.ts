@@ -4,12 +4,13 @@ import { UserRepositoryPrisma } from "./UserRepositoryPrisma";
 import { CreateUser } from "../application/usecases/CreateUseCase";
 import { UpdateUser } from "../application/usecases/UpdateUseCase";
 import { BcryptUtility } from "./utilities/BcryptUtility";
+import { RabbitUtility } from "./utilities/RabbitUtility";
 
 const repository = new UserRepositoryPrisma();
 const encryptPassword = new BcryptUtility()
+const rabbit = new RabbitUtility()
 
-
-const createUserUseCase = new CreateUser(repository, encryptPassword);
+const createUserUseCase = new CreateUser(repository, encryptPassword, rabbit);
 export const createUserController = new CreateUserController(createUserUseCase);
 
 const updateUserUseCase = new UpdateUser(repository);
